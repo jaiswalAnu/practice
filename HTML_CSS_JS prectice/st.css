@@ -1,0 +1,36 @@
+.flip_card{
+    width: 320px;
+    height: 220px;
+    perspective: 400px;
+
+}
+.flip_card_inner
+{position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.9s;
+    transform-style:preserve-3d ;
+
+}
+.flip_card:hover .flip_card_inner{
+    transform: rotateY(180deg);
+}
+.flip_card_frontside, .flip_card_backside{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    backface-visibility: inherit;
+
+}
+.flip_card_backside{
+    background-color: lightblue;
+    color: white;
+    transform: rotateY(180deg);
+
+}
+.flip_card_frontside img{
+    width: 100%;
+    height: 200%;
+    border: 10px solid rgb(173, 230, 176);
+}
